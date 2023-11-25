@@ -3,29 +3,46 @@
   /* The box-sizing property allows us to include the padding and border in an element's total width and height */
     box-sizing: border-box; 
   }
+
+  :root {
+    --header-height: 20vh;
+  }
+
   .container {
     display: flex;
     flex-direction: column;
+    /*padding: 1vw;*/
+    /*border: 1px solid red;*/
   }
-  .temp_ep {
+
+  .temporada_episodio {
+    justify-content: space-around;
     display: flex;
     flex-direction: row;
-    height: 20%;
+    height: var(--header-height);
+    min-height: var(--header-height);
+    /*border: 2px solid blue;*/
   }
-  .temp { 
+  .temporada { 
+    align-items: center;
+    justify-content: center;
     display: flex;
-    width: 40%; 
+    /*border: 2px solid red;*/
+  }
+  .episodio {
+    min-width: 50%; /* Ver con contenido si hace falta */
+    /*border: 2px solid green;*/
   }
   .logotemp { 
     display: flex;
-    /*width: 80%; */
-    max-height: 100%;
-    max-width: 100%;
+    height: var(--header-height);
+    /*border: 2px solid purple;*/
   }
+
   .stats {
     display: flex;
     flex-direction: row;
-    height: 80%;
+    /*border: 1px solid green;*/
   }
   .stat1_foto {
     display: flex;
@@ -35,19 +52,16 @@
   .stat2 {
     background-color: #04AA6D;
     padding: 20px;
-    float: left;
     width: 20%;
   }
   .stat1 {
     background-color: #2196F3;
     padding: 20px;
-    float: left;
     width: 25%; /* El contenedor de stat1 y foto mide 80% asi q esto es 20% del tot de la imagen */
   }
   .foto {
     background-color: #f1f1f1;
     padding: 20px;
-    float: left;
     width: 75%; /* El contenedor de stat1 y foto mide 80% asi q esto es 60% del tot de la imagen */
   }
   
