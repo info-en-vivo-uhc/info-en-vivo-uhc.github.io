@@ -29,10 +29,27 @@
     display: flex;
     /*border: 2px solid red;*/
   }
-  .episodio {
+
+
+  .selector_episodio {
     min-width: 50%; /* Ver con contenido si hace falta */
     /*border: 2px solid green;*/
+    display: flex;
+    flex-direction: row;
   }
+  .flecha {
+    display: flex;
+    max-width: 20%;
+    background-color: #04AA6D;
+    padding: 20px;
+  }
+  #ep_name {
+    background-color: #04AAFF;
+    padding: 20px;
+  }
+
+
+
   .logotemp { 
     display: flex;
     height: var(--header-height);
