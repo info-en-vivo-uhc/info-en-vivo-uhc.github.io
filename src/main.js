@@ -21,7 +21,7 @@ function updateStats(info_jugador, stats_jugador, numJugador) {
     categorias.forEach(categoria => {
         let attr = categoria+"_"+numJugador;
         let p = document.getElementById(attr); // Encuentra el elemento "p" en el sitio
-        console.log("JUGADOR: "+info_jugador["nombre"]+"\nCategoria: "+categoria+"\nStats: "p);
+        console.log("JUGADOR: "+info_jugador["nombre"]+"\nCategoria: "+categoria+"\nStats: "+stats_jugador[categoria]);
         //p.innerHTML = createContent(stats_jugador[attr]);
     });
     p.onclick = function(){
