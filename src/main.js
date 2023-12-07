@@ -2,6 +2,8 @@ import { printError, getJson } from './aux.js';
 
 var categorias = ["equipamiento","minerales","curacion","nether","misc","inventario"]
 
+main()
+
 async function loadStats(temp, ep, jugador, equipo) {
     if (equipo == null) {
         var info_jugadores = await getJson("../data/"+temp+"/equipos.json");
@@ -24,11 +26,8 @@ function updateStats(info_jugador, stats_jugador, numJugador) {
         console.log("JUGADOR: "+info_jugador["nombre"]+"\nCategoria: "+categoria+"\nStats: "+stats_jugador[categoria]);
         //p.innerHTML = createContent(stats_jugador[attr]);
     });
-    p.onclick = function(){
-        selectMap();
-        selectTexturePack();
-        _hideStartMenu();
-        document.getElementById("startMenu").style.display = "none";
-        document.getElementById("debugHover").style.display = "flex";
-    }
+}
+
+function main() {
+    loadStats(11, 1, "elrichmc", null);
 }
