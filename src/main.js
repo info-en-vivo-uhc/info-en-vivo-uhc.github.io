@@ -1,4 +1,4 @@
-import { printError, getJson } from './aux.js';
+import { printError, getJson } from './auxiliares.js';
 
 var categorias = ["equipamiento","minerales","curacion","nether","misc","inventario"]
 
