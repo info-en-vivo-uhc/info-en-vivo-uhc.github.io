@@ -1,7 +1,5 @@
 {
-  "Equipos": {
-    "killerrich" : {
-      "miembros" : ["elrichmc", "killercreeper55"]
-    }
+  "killerrich" : {
+    "miembros" : ["elrichmc", "killercreeper55"]
   }
 }

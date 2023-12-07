@@ -32,16 +32,25 @@
 .contenido {
   color: white;
   padding: 5px;
+  display: flex;
+  flex-direction: row;
 }
 
-
+.item {
+  display: flex;
+  flex-direction: column;
+}
 
 .foto {
   background-color: #f1f1f1;
   padding: 20px;
   width: 33.33%; /* El contenedor de stat1 y foto mide 80% asi q esto es 60% del tot de la imagen */
 }
-  
+
+.displayname {
+  color: white;
+  padding: 5px;
+}
   
 /* Use a media query to add a break point at 800px: */
 @media screen and (max-width: 800px) {

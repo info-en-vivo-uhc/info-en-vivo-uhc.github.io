@@ -34,7 +34,7 @@
 
   .selector_episodio {
     min-width: 50%; /* Ver con contenido si hace falta */
-    align-items: center;
+    text-align: center;
     height: 50%;
     /*border: 2px solid green;*/
     display: flex;
