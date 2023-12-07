@@ -1,0 +1,389 @@
+{
+	"Jugadores": {
+
+		"chincheto77": {
+			"vivo": true,
+			"vida": 10,
+			"equipamiento": {
+				"cabeza":{"material": null, "encantamientos":[]},
+				"cuerpo":{"material": null, "encantamientos":[]},
+				"piernas":{"material": null, "encantamientos":[]},
+				"pies":{"material": null, "encantamientos":[]},
+				"espada":{"material": "piedra", "encantamientos":[]},
+				"hacha":{"material": "piedra", "encantamientos":[]},
+				"arco":{"material": null, "encantamientos":[]},
+				"ballesta":{"material": null, "encantamientos":[]}
+			},
+			"minerales": {
+				"hierro": 0,
+				"oro": 0,
+				"diamante": 0
+			},
+			"curacion": {
+				"manzana":2,
+				"manzana_oro":0,
+				"melon_oro":0
+			},
+			"nether_pociones": {
+				"blazerod":0,
+				"ojoarana":0,
+				"pociones" : {"swiftness":0}
+			},
+			"miscelaneo": [],
+			"inventario": []
+		},
+		
+
+		"elrichmc": {
+			"vivo": true,
+			"vida": 10,
+			"equipamiento": {
+				"cabeza":{"material": "hierro", "encantamientos":[]},
+				"cuerpo":{"material": "hierro", "encantamientos":[]},
+				"piernas":{"material": "hierro", "encantamientos":[]},
+				"pies":{"material": "hierro", "encantamientos":[]},
+				"espada":{"material": "piedra", "encantamientos":[]},
+				"hacha":{"material": "piedra", "encantamientos":[]},
+				"arco":{"material": null, "encantamientos":[]},
+				"ballesta":{"material": null, "encantamientos":[]}
+			},
+			"minerales": {
+				"hierro": 7,
+				"oro": 0,
+				"diamante": 0
+			},
+			"curacion": {
+				"manzana":4,
+				"manzana_oro":0,
+				"melon_oro":0
+			},
+			"nether_pociones": {
+				"blazerod":0,
+				"ojoarana":0,
+				"pociones" : {"swiftness":0}
+			},
+			"miscelaneo": [["escudo",true]],
+			"inventario": []
+		},
+
+		"esvandal": {
+			"vivo": true,
+			"vida": 10,
+			"equipamiento": {
+				"cabeza":{"material": "hierro", "encantamientos":[]},
+				"cuerpo":{"material": null, "encantamientos":[]},
+				"piernas":{"material": null, "encantamientos":[]},
+				"pies":{"material": "hierro", "encantamientos":[]},
+				"espada":{"material": null, "encantamientos":[]},
+				"hacha":{"material": "piedra", "encantamientos":[]},
+				"arco":{"material": null, "encantamientos":[]},
+				"ballesta":{"material": null, "encantamientos":[]}
+			},
+			"minerales": {
+				"hierro": 0,
+				"oro": 0,
+				"diamante": 0
+			},
+			"curacion": {
+				"manzana":0,
+				"manzana_oro":0,
+				"melon_oro":0
+			},
+			"nether_pociones": {
+				"blazerod":0,
+				"ojoarana":0,
+				"pociones" : {"swiftness":0}
+			},
+			"miscelaneo": [["escudo",true]],
+			"inventario": []
+		},
+
+		"felipez360": {
+			"vivo": true,
+			"vida": 8,
+			"equipamiento": {
+				"cabeza":{"material": "hierro", "encantamientos":[]},
+				"cuerpo":{"material": "hierro", "encantamientos":[]},
+				"piernas":{"material": null, "encantamientos":[]},
+				"pies":{"material": null, "encantamientos":[]},
+				"espada":{"material": "oro", "encantamientos":["Mending"]},
+				"hacha":{"material": "piedra", "encantamientos":[]},
+				"arco":{"material": null, "encantamientos":[]},
+				"ballesta":{"material": null, "encantamientos":[]}
+			},
+			"minerales": {
+				"hierro": 2,
+				"oro": 0,
+				"diamante": 0
+			},
+			"curacion": {
+				"manzana":0,
+				"manzana_oro":0,
+				"melon_oro":0
+			},
+			"nether_pociones": {
+				"blazerod":0,
+				"ojoarana":0,
+				"pociones" : {"swiftness":0}
+			},
+			"miscelaneo": [[]],
+			"inventario": []
+		}, 	
+
+		"kakytron": {
+			"vivo": true,
+			"vida": 10,
+			"equipamiento": {
+				"cabeza":{"material": null, "encantamientos":[]},
+				"cuerpo":{"material": null, "encantamientos":[]},
+				"piernas":{"material": null, "encantamientos":[]},
+				"pies":{"material": null, "encantamientos":[]},
+				"espada":{"material": "piedra", "encantamientos":[]},
+				"hacha":{"material": "piedra", "encantamientos":[]},
+				"arco":{"material": null, "encantamientos":[]},
+				"ballesta":{"material": null, "encantamientos":[]}
+			},
+			"minerales": {
+				"hierro": 1,
+				"oro": 0,
+				"diamante": 0
+			},
+			"curacion": {
+				"manzana":0,
+				"manzana_oro":0,
+				"melon_oro":0
+			},
+			"nether_pociones": {
+				"blazerod":0,
+				"ojoarana":0,
+				"pociones" : {"swiftness":3}
+			},
+			"miscelaneo": [],
+			"inventario": []
+		},
+
+		"kaumaru102": {
+			"vivo": true,
+			"vida": 8,
+			"equipamiento": {
+				"cabeza":{"material": "hierro", "encantamientos":[]},
+				"cuerpo":{"material": "hierro", "encantamientos":[]},
+				"piernas":{"material": null, "encantamientos":[]},
+				"pies":{"material": "hierro", "encantamientos":[]},
+				"espada":{"material": "piedra", "encantamientos":[]},
+				"hacha":{"material": "piedra", "encantamientos":[]},
+				"arco":{"material": null, "encantamientos":[]},
+				"ballesta":{"material": null, "encantamientos":[]}
+			},
+			"minerales": {
+				"hierro": 2,
+				"oro": 0,
+				"diamante": 0
+			},
+			"curacion": {
+				"manzana":0,
+				"manzana_oro":0,
+				"melon_oro":0
+			},
+			"nether_pociones": {
+				"blazerod":0,
+				"ojoarana":0,
+				"pociones" : {"swiftness":0}
+			},
+			"miscelaneo": [],
+			"inventario": []
+		},
+		
+		"killercreeper55": {
+			"vivo": true,
+			"vida": 4.5,
+			"equipamiento": {
+				"cabeza":{"material": null, "encantamientos":[]},
+				"cuerpo":{"material": "hierro", "encantamientos":[]},
+				"piernas":{"material": null, "encantamientos":[]},
+				"pies":{"material": null, "encantamientos":[]},
+				"espada":{"material": "piedra", "encantamientos":[]},
+				"hacha":{"material": "piedra", "encantamientos":[]},
+				"arco":{"material": null, "encantamientos":[]},
+				"ballesta":{"material": null, "encantamientos":[]}
+			},
+			"minerales": {
+				"hierro": 8,
+				"oro": 0,
+				"diamante": 0
+			},
+			"curacion": {
+				"manzana":0,
+				"manzana_oro":2,
+				"melon_oro":3
+			},
+			"nether_pociones": {
+				"blazerod":10,
+				"ojoarana":3,
+				"pociones" : {"swiftness":3}
+			},
+			"miscelaneo": [["TNT", 10]],
+			"inventario": []
+		},
+
+		"paracetamor": {
+			"vivo": true,
+			"vida": 4.5,
+			"equipamiento": {
+				"cabeza":{"material": "diamante", "encantamientos":[]},
+				"cuerpo":{"material": "diamante", "encantamientos":[]},
+				"piernas":{"material": "diamante", "encantamientos":[]},
+				"pies":{"material": "diamante", "encantamientos":[]},
+				"espada":{"material": "diamante", "encantamientos":[]},
+				"hacha":{"material": "diamante", "encantamientos":[]},
+				"arco":{"material": null, "encantamientos":[]},
+				"ballesta":{"material": null, "encantamientos":[]}
+			},
+			"minerales": {
+				"hierro": 15,
+				"oro": 36,
+				"diamante": 4
+			},
+			"curacion": {
+				"manzana":10,
+				"manzana_oro":2,
+				"melon_oro":3
+			},
+			"nether_pociones": {
+				"blazerod":10,
+				"ojoarana":3,
+				"pociones" : {"swiftness":3}
+			},
+			"miscelaneo": [["TNT", 10]],
+			"inventario": []
+		},
+
+		"rangugamer": {
+			"vivo": true,
+			"vida": 4.5,
+			"equipamiento": {
+				"cabeza":{"material": "diamante", "encantamientos":[]},
+				"cuerpo":{"material": "diamante", "encantamientos":[]},
+				"piernas":{"material": "diamante", "encantamientos":[]},
+				"pies":{"material": "diamante", "encantamientos":[]},
+				"espada":{"material": "diamante", "encantamientos":[]},
+				"hacha":{"material": "diamante", "encantamientos":[]},
+				"arco":{"material": null, "encantamientos":[]},
+				"ballesta":{"material": null, "encantamientos":[]}
+			},
+			"minerales": {
+				"hierro": 15,
+				"oro": 36,
+				"diamante": 4
+			},
+			"curacion": {
+				"manzana":10,
+				"manzana_oro":2,
+				"melon_oro":3
+			},
+			"nether_pociones": {
+				"blazerod":10,
+				"ojoarana":3,
+				"pociones" : {"swiftness":3}
+			},
+			"miscelaneo": [["TNT", 10]],
+			"inventario": []
+		},
+
+		"rubik": {
+			"vivo": true,
+			"vida": 4.5,
+			"equipamiento": {
+				"cabeza":{"material": "diamante", "encantamientos":[]},
+				"cuerpo":{"material": "diamante", "encantamientos":[]},
+				"piernas":{"material": "diamante", "encantamientos":[]},
+				"pies":{"material": "diamante", "encantamientos":[]},
+				"espada":{"material": "diamante", "encantamientos":[]},
+				"hacha":{"material": "diamante", "encantamientos":[]},
+				"arco":{"material": null, "encantamientos":[]},
+				"ballesta":{"material": null, "encantamientos":[]}
+			},
+			"minerales": {
+				"hierro": 15,
+				"oro": 36,
+				"diamante": 4
+			},
+			"curacion": {
+				"manzana":10,
+				"manzana_oro":2,
+				"melon_oro":3
+			},
+			"nether_pociones": {
+				"blazerod":10,
+				"ojoarana":3,
+				"pociones" : {"swiftness":3}
+			},
+			"miscelaneo": [["TNT", 10]],
+			"inventario": []
+		},
+
+		"thegamermaldito": {
+			"vivo": true,
+			"vida": 4.5,
+			"equipamiento": {
+				"cabeza":{"material": "diamante", "encantamientos":[]},
+				"cuerpo":{"material": "diamante", "encantamientos":[]},
+				"piernas":{"material": "diamante", "encantamientos":[]},
+				"pies":{"material": "diamante", "encantamientos":[]},
+				"espada":{"material": "diamante", "encantamientos":[]},
+				"hacha":{"material": "diamante", "encantamientos":[]},
+				"arco":{"material": null, "encantamientos":[]},
+				"ballesta":{"material": null, "encantamientos":[]}
+			},
+			"minerales": {
+				"hierro": 15,
+				"oro": 36,
+				"diamante": 4
+			},
+			"curacion": {
+				"manzana":10,
+				"manzana_oro":2,
+				"melon_oro":3
+			},
+			"nether_pociones": {
+				"blazerod":10,
+				"ojoarana":3,
+				"pociones" : {"swiftness":3}
+			},
+			"miscelaneo": [["TNT", 10]],
+			"inventario": []
+		},
+
+		"tonacho": {
+			"vivo": true,
+			"vida": 4.5,
+			"equipamiento": {
+				"cabeza":{"material": "diamante", "encantamientos":[]},
+				"cuerpo":{"material": "diamante", "encantamientos":[]},
+				"piernas":{"material": "diamante", "encantamientos":[]},
+				"pies":{"material": "diamante", "encantamientos":[]},
+				"espada":{"material": "diamante", "encantamientos":[]},
+				"hacha":{"material": "diamante", "encantamientos":[]},
+				"arco":{"material": null, "encantamientos":[]},
+				"ballesta":{"material": null, "encantamientos":[]}
+			},
+			"minerales": {
+				"hierro": 15,
+				"oro": 36,
+				"diamante": 4
+			},
+			"curacion": {
+				"manzana":10,
+				"manzana_oro":2,
+				"melon_oro":3
+			},
+			"nether_pociones": {
+				"blazerod":10,
+				"ojoarana":3,
+				"pociones" : {"swiftness":3}
+			},
+			"miscelaneo": [["TNT", 10]],
+			"inventario": []
+		}
+	}
+}
