@@ -1,39 +1,57 @@
 .stats {
-    display: flex;
-    flex-direction: row;
-    /*border: 1px solid green;*/
+  display: flex;
+  flex-direction: row;
+  /*border: 1px solid green;*/
+}
+.stat1_foto {
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+}
+.stat2 {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #2b2b2b;
+  width: 40%;
+}
+
+
+.stat1 {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #2b2b2b;
+  width: 66%; /* El contenedor de stat1 y foto mide 80% asi q esto es 20% del tot de la imagen */
+}
+.encabezados {
+  color: black;
+  padding: 5px;
+  background-color: #feb13b;
+}
+.contenido {
+  color: white;
+  padding: 5px;
+}
+
+
+
+.foto {
+  background-color: #f1f1f1;
+  padding: 20px;
+  width: 33%; /* El contenedor de stat1 y foto mide 80% asi q esto es 60% del tot de la imagen */
+}
+  
+  
+/* Use a media query to add a break point at 800px: */
+@media screen and (max-width: 800px) {
+  .stat1_foto, .stat2, .stat1, .foto {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+  .stats {
+    flex-direction: column;
   }
   .stat1_foto {
-    display: flex;
-    flex-direction: row;
-    width: 80%;
+    flex-direction: column-reverse;
   }
-  .stat2 {
-    background-color: #04AA6D;
-    padding: 20px;
-    width: 20%;
-  }
-  .stat1 {
-    background-color: #2196F3;
-    padding: 20px;
-    width: 25%; /* El contenedor de stat1 y foto mide 80% asi q esto es 20% del tot de la imagen */
-  }
-  .foto {
-    background-color: #f1f1f1;
-    padding: 20px;
-    width: 75%; /* El contenedor de stat1 y foto mide 80% asi q esto es 60% del tot de la imagen */
-  }
-  
-  
-  /* Use a media query to add a break point at 800px: */
-  @media screen and (max-width: 800px) {
-    .stat1_foto, .stat2, .stat1, .foto {
-      width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
-    }
-    .stats {
-      flex-direction: column;
-    }
-    .stat1_foto {
-      flex-direction: column-reverse;
-    }
-  }
+}
