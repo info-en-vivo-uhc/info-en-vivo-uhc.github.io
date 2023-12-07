@@ -2,6 +2,7 @@
 	"Jugadores": {
 		"elrichmc": {
 			"vivo": true,
+			"vida": 4.5,
 			"equipamiento": {
 				"cabeza":{"material": "diamante", "encantamientos":[]},
 				"cuerpo":{"material": "diamante", "encantamientos":[]},
@@ -26,7 +27,9 @@
 				"blazerod":10,
 				"ojoarana":3,
 				"pociones" : {"swiftness":3}
-			}
+			},
+			"miscelaneo": [["TNT", 10]],
+			"inventario": []
 		}
 	}
 }
