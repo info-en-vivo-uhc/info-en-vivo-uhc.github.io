@@ -51,6 +51,11 @@
   color: white;
   padding: 5px;
 }
+
+.vida {
+  justify-content: space-around;
+  align-items: center;
+}
   
 /* Use a media query to add a break point at 800px: */
 @media screen and (max-width: 800px) {
