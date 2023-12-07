@@ -2,5 +2,6 @@
 
 ## Todo:
 - Cargar contenido jugadores dinámicamente
+- Conseguir todos los assests necesarios de https://github.com/InventivetalentDev/minecraft-assets/tree/1.20.3
 - Background image
 - Minecraft font
