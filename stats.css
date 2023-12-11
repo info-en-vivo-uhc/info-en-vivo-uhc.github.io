@@ -30,10 +30,13 @@
   background-color: #feb13b;
 }
 .contenido {
+  justify-content: space-around;
+  align-items: center;
   color: white;
   padding: 5px;
   display: flex;
   flex-direction: row;
+  image-rendering: pixelated;
 }
 
 .item {
@@ -50,11 +53,6 @@
 .displayname {
   color: white;
   padding: 5px;
-}
-
-.vida {
-  justify-content: space-around;
-  align-items: center;
 }
   
 /* Use a media query to add a break point at 800px: */
