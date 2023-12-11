@@ -5,16 +5,22 @@
             "youtube": "http://www.youtube.com/@ElRichMC"
         }
     },
-    "killercreeper55": {
+    "killercreeper_55": {
         "nombre": "KillerCreeper55",
         "sociales": {
             "youtube": "https://www.youtube.com/killercreeper55"
         }
     },
-    "srchincheto77": {
-        "nombre": "SrChincheto77",
+    "chincheto77": {
+        "nombre": "Chincheto77",
         "sociales": {
             "youtube": "https://www.youtube.com/@SrChincheto77"
+        }
+    },
+    "esvandal": {
+        "nombre": "EsVandal",
+        "sociales": {
+            "youtube": "https://www.youtube.com/@EsVandal"
         }
     }
 }
