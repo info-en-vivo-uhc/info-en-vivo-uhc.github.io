@@ -38,11 +38,12 @@
     /*border: 2px solid red;*/
   }
 
-
+  .selectores {
+    min-width: 50%;
+  }
   .selector_episodio {
-    min-width: 50%; /* Ver con contenido si hace falta */
+    width: 100%; /* Ver con contenido si hace falta */
     text-align: center;
-    height: 50%;
     /*border: 2px solid green;*/
     display: flex;
     flex-direction: row;
@@ -61,7 +62,12 @@
     width: 100%; 
   }
 
-
+  .selector_jugador {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+  }
 
   .logotemp { 
     display: flex;

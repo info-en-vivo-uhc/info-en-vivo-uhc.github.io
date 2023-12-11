@@ -26,6 +26,7 @@ class IconPaths {
     static minerales = this.equipamiento;  
     static curacion = this.equipamiento;  
     static nether_pociones = this.equipamiento;  
+    static jugadores = "../img/jugadores/";
 }
 
 class Traductor {
@@ -73,19 +74,28 @@ class Traductor {
     static nether_pociones =
     {
         "blazerod": "blaze_rod",
-        "ojoarana": "spider_eye"
+        "ojoarana": "spider_eye",
+        "polvoblaze": "blaze_powder"
     };
     static miscelaneo = 
     {
         "escudo": "shield",
-        "escudo_path": "../img/assets/"
+        "escudo_path": "../img/assets/",
+        "escudo_dims": [40, 21],
+        "brewing_stand": "brewing_stand",
+        "brewing_stand_path": IconPaths.equipamiento,
+        "brewing_stand_dims": [40, 40],
+        "aldea": "village",
+        "aldea_path": "../img/assets/",
+        "aldea_dims": [35, 40]
     };
     static equipamientoAImagenes(tipo, valores) {
+        let images = []
         let material = ""
-        if (valores["material"] != null) {
+        if (! (valores["material"] == null || valores["material"] == "none")) {
             material = Traductor.material[valores["material"]] + "_"
         }
-        let images = [material + Traductor.equipamiento[tipo] + ".png"];
+        images.push(material + Traductor.equipamiento[tipo] + ".png");
         if (material == "leather_") {
             images.push(material + Traductor.equipamiento[tipo] + "_overlay.png");
         }

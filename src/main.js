@@ -5,36 +5,67 @@ var categorias = ["equipamiento","minerales","curacion","nether_pociones","misce
 main()
 
 function main() {
-    loadStats(11, 1, "elrichmc", null);
+    let temporada = 11;
+    let episodio = 1;
+    loadPlayers(temporada, episodio);
+    loadStats(temporada, episodio, "elrichmc", null);
+}
+
+async function loadPlayers(temp, ep) {
+    var info_jugadores = await getJson("../data/"+temp+"/jugadores.json");
+    for (let jugador in info_jugadores) {
+        let selectorHTML = document.getElementById("selector_jugador");
+        let iconHTML = crearImgElem([IconPaths.jugadores + jugador + "_icon.png"], 40, 40, info_jugadores[jugador]["nombre"]);
+        iconHTML.onclick = function() {
+            loadStats(temp, ep, jugador, null);
+        }
+        selectorHTML.appendChild(iconHTML);
+    }
 }
 
 async function loadStats(temp, ep, jugador, equipo) {
+    let numJugador = 1;
+    clearStats(numJugador);
     if (equipo == null) {
         var info_jugadores = await getJson("../data/"+temp+"/jugadores.json");
         var info_jugador = info_jugadores[jugador];
         var stats_jugadores = await getJson("../data/"+temp+"/"+ep+".json");
         var stats_jugador = stats_jugadores[jugador];
-        updateStats(info_jugador, stats_jugador, 1);
+        updateStats(info_jugador, stats_jugador, numJugador);
     } else {
         var equipo_data = await getJson("../data/"+temp+"/equipos.json");
         //equipo_data[equipo];
     }
 }
 
+function removeChildren(div){
+    while(div.firstChild){
+        div.removeChild(div.firstChild);
+    }
+}
+
+function clearStats(numJugador) {
+    removeChildren(document.getElementById("vida_"+numJugador));
+    categorias.forEach(categoria => {
+        let attr = categoria+"_"+numJugador;
+        let categoryHTML = document.getElementById(attr);
+        removeChildren(categoryHTML);
+    });
+}
+
 function updateStats(info_jugador, stats_jugador, numJugador) {
-    let nameHTML = document.getElementById("displayname_"+numJugador); // Encuentra el elemento "p" en el sitio
+    let nameHTML = document.getElementById("displayname_"+numJugador);
     nameHTML.innerHTML = info_jugador["nombre"]
     updateVida(numJugador, stats_jugador["vida"]);
     categorias.forEach(categoria => {
         let attr = categoria+"_"+numJugador;
-        let categoryHTML = document.getElementById(attr); // Encuentra el elemento "p" en el sitio
-        //console.log("JUGADOR: "+info_jugador["nombre"]+"\nCategoria: "+categoria+"\nStats: "+JSON.stringify(stats_jugador[categoria]));
+        let categoryHTML = document.getElementById(attr);
         crearLuegoAgregarContenido(categoria, categoryHTML, stats_jugador[categoria]);
     });
 }
 
 async function updateVida(numJugador, numVida) {
-    let vidaHTML = document.getElementById("vida_"+numJugador); // Encuentra el elemento "p" en el sitio
+    let vidaHTML = document.getElementById("vida_"+numJugador);
     vidaHTML.appendChild(barraCorazones(numVida));
 }
 
@@ -90,12 +121,15 @@ async function crearLuegoAgregarContenido(categoria, categoryHTML, stats_jugador
     switch (categoria) {
         case "equipamiento":
             for (let k in stats_jugador_en_categoria) {
-                let nombreImg = Traductor.equipamientoAImagenes(k, stats_jugador_en_categoria[k]);
-                nombreImg = nombreImg.map((element) => 
-                    IconPaths.equipamiento+element
-                );
-                let elemImg = crearImgElem(nombreImg, 32, 32, k + " " + stats_jugador_en_categoria[k]["material"]);
-                categoryHTML.appendChild(elemImg);
+                let valores = stats_jugador_en_categoria[k];
+                    if (valores["material"] != null) {
+                    let nombreImg = Traductor.equipamientoAImagenes(k, valores);
+                    nombreImg = nombreImg.map((element) => 
+                        IconPaths.equipamiento+element
+                    );
+                    let elemImg = crearImgElem(nombreImg, 32, 32, k + " " + valores["material"]);
+                    categoryHTML.appendChild(elemImg);
+                }
             }
             break;
         case "minerales":
@@ -126,7 +160,8 @@ async function crearLuegoAgregarContenido(categoria, categoryHTML, stats_jugador
                 let state = stats_jugador_en_categoria[k][1];
                 if(state == true) {
                     let nombreImg = [Traductor.miscelaneo[item+"_path"] + Traductor.miscelaneo[item] + ".png"];
-                    let elemItem = crearImgElem(nombreImg, 40, 21, item);
+                    let dims = Traductor.miscelaneo[item+"_dims"];
+                    let elemItem = crearImgElem(nombreImg, dims[0], dims[1], item);
                     categoryHTML.appendChild(elemItem);
                 }
             }
