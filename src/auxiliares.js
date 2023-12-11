@@ -25,6 +25,7 @@ class IconPaths {
     static material = this.equipamiento;  
     static minerales = this.equipamiento;  
     static curacion = this.equipamiento;  
+    static nether_pociones = this.equipamiento;  
 }
 
 class Traductor {
@@ -53,7 +54,16 @@ class Traductor {
         "arco": "bow",
         "ballesta": "crossbow_arrow"
     }
-    static minerales = this.material;
+    static minerales = 
+    {
+        "hierro": "iron_ingot",
+        "oro": "gold_ingot",
+        "cuero": "leather",
+        "netherite": "netherite",
+        "diamante": "diamond",
+        "esmeralda": "emerald",
+        "lapis_lazuli": "lapis_lazuli"
+    };
     static curacion = 
     {
         "manzana": "apple",
@@ -68,7 +78,7 @@ class Traductor {
     static miscelaneo = 
     {
         "escudo": "shield",
-        "escudo_path": IconPaths.equipamiento
+        "escudo_path": "../img/assets/"
     };
     static equipamientoAImagenes(tipo, valores) {
         let material = ""

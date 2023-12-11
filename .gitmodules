@@ -1,3 +1,4 @@
 [submodule "minecraft-assets"]
 	path = minecraft-assets
 	url = git@github.com:InventivetalentDev/minecraft-assets.git
+	ignore = dirty

@@ -75,8 +75,18 @@ function crearImgElem(imgs, height=null, width=null, alt=null) {
     return imgHTML;
 }
 
+function crearItemElem(itemCant, pathsImgs, nombre) {
+    let img = crearImgElem(pathsImgs, 32, 32, itemCant + " " + nombre);
+    let imgWithText = document.createElement("div");
+    imgWithText.style.setProperty("text-align", "center");
+    imgWithText.appendChild(img);
+    let textHTML = document.createElement("div");
+    textHTML.innerText = itemCant;
+    imgWithText.appendChild(textHTML);
+    return imgWithText
+}
+
 async function crearLuegoAgregarContenido(categoria, categoryHTML, stats_jugador_en_categoria) {
-    let elem = document.createElement("div");
     switch (categoria) {
         case "equipamiento":
             for (let k in stats_jugador_en_categoria) {
@@ -85,26 +95,47 @@ async function crearLuegoAgregarContenido(categoria, categoryHTML, stats_jugador
                     IconPaths.equipamiento+element
                 );
                 let elemImg = crearImgElem(nombreImg, 32, 32, k + " " + stats_jugador_en_categoria[k]["material"]);
-                elem.appendChild(elemImg);
+                categoryHTML.appendChild(elemImg);
             }
             break;
         case "minerales":
-            elem.innerText = 1;
+            for (let k in stats_jugador_en_categoria) {
+                let nombreImg = [IconPaths.minerales + Traductor.minerales[k] + ".png"];
+                let elemItem = crearItemElem(stats_jugador_en_categoria[k], nombreImg, k);
+                categoryHTML.appendChild(elemItem);
+            }
             break;
         case "curacion":
-            elem.innerText = 2;
+            for (let k in stats_jugador_en_categoria) {
+                let nombreImg = [IconPaths.curacion + Traductor.curacion[k] + ".png"];
+                let elemItem = crearItemElem(stats_jugador_en_categoria[k], nombreImg, k);
+                categoryHTML.appendChild(elemItem);
+            }
             break;
         case "nether_pociones":
-            elem.innerText = 3;
+            for (let k in stats_jugador_en_categoria) {
+                if (k == "pociones") { break; } //TODO: implementar pociones acá
+                let nombreImg = [IconPaths.nether_pociones + Traductor.nether_pociones[k] + ".png"];
+                let elemItem = crearItemElem(stats_jugador_en_categoria[k], nombreImg, k);
+                categoryHTML.appendChild(elemItem);
+            }
             break;
         case "miscelaneo":
-            elem.innerText = 4;
+            for (let k in stats_jugador_en_categoria) {
+                let item = stats_jugador_en_categoria[k][0];
+                let state = stats_jugador_en_categoria[k][1];
+                if(state == true) {
+                    let nombreImg = [Traductor.miscelaneo[item+"_path"] + Traductor.miscelaneo[item] + ".png"];
+                    let elemItem = crearImgElem(nombreImg, 40, 21, item);
+                    categoryHTML.appendChild(elemItem);
+                }
+            }
             break;
         case "inventario":
-            elem.innerText = 5;
+            //TODO: completar con link a inventario?
+            //categoryHTML.innerText = 5;
             break;
         default:
-            elem.innerText = -1;
+            categoryHTML.innerText = -1;
       }
-      categoryHTML.appendChild(elem); 
 }

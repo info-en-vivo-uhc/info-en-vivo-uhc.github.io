@@ -30,13 +30,13 @@
   background-color: #feb13b;
 }
 .contenido {
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   color: white;
   padding: 5px;
   display: flex;
   flex-direction: row;
-  image-rendering: pixelated;
+  /*image-rendering: pixelated;*/
 }
 
 .item {
