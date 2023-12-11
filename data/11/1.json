@@ -9,8 +9,8 @@
 			"pies":{"material": null, "encantamientos":[]},
 			"espada":{"material": "piedra", "encantamientos":[]},
 			"hacha":{"material": "piedra", "encantamientos":[]},
-			"arco":{"material": null, "encantamientos":[]},
-			"ballesta":{"material": null, "encantamientos":[]}
+			"arco":{"material": "none", "encantamientos":[]},
+			"ballesta":{"material": "none", "encantamientos":[]}
 		},
 		"minerales": {
 			"hierro": 0,
@@ -42,8 +42,8 @@
 			"pies":{"material": "hierro", "encantamientos":[]},
 			"espada":{"material": "piedra", "encantamientos":[]},
 			"hacha":{"material": "piedra", "encantamientos":[]},
-			"arco":{"material": null, "encantamientos":[]},
-			"ballesta":{"material": null, "encantamientos":[]}
+			"arco":{"material": "none", "encantamientos":[]},
+			"ballesta":{"material": "none", "encantamientos":[]}
 		},
 		"minerales": {
 			"hierro": 7,
@@ -74,8 +74,8 @@
 			"pies":{"material": "hierro", "encantamientos":[]},
 			"espada":{"material": null, "encantamientos":[]},
 			"hacha":{"material": "piedra", "encantamientos":[]},
-			"arco":{"material": null, "encantamientos":[]},
-			"ballesta":{"material": null, "encantamientos":[]}
+			"arco":{"material": "none", "encantamientos":[]},
+			"ballesta":{"material": "none", "encantamientos":[]}
 		},
 		"minerales": {
 			"hierro": 0,
@@ -106,8 +106,8 @@
 			"pies":{"material": null, "encantamientos":[]},
 			"espada":{"material": "oro", "encantamientos":["Mending"]},
 			"hacha":{"material": "piedra", "encantamientos":[]},
-			"arco":{"material": null, "encantamientos":[]},
-			"ballesta":{"material": null, "encantamientos":[]}
+			"arco":{"material": "none", "encantamientos":[]},
+			"ballesta":{"material": "none", "encantamientos":[]}
 		},
 		"minerales": {
 			"hierro": 2,
@@ -138,8 +138,8 @@
 			"pies":{"material": null, "encantamientos":[]},
 			"espada":{"material": "piedra", "encantamientos":[]},
 			"hacha":{"material": "piedra", "encantamientos":[]},
-			"arco":{"material": null, "encantamientos":[]},
-			"ballesta":{"material": null, "encantamientos":[]}
+			"arco":{"material": "none", "encantamientos":[]},
+			"ballesta":{"material": "none", "encantamientos":[]}
 		},
 		"minerales": {
 			"hierro": 1,
@@ -170,8 +170,8 @@
 			"pies":{"material": "hierro", "encantamientos":[]},
 			"espada":{"material": "piedra", "encantamientos":[]},
 			"hacha":{"material": "piedra", "encantamientos":[]},
-			"arco":{"material": null, "encantamientos":[]},
-			"ballesta":{"material": null, "encantamientos":[]}
+			"arco":{"material": "none", "encantamientos":[]},
+			"ballesta":{"material": "none", "encantamientos":[]}
 		},
 		"minerales": {
 			"hierro": 2,
@@ -202,8 +202,8 @@
 			"pies":{"material": null, "encantamientos":[]},
 			"espada":{"material": "piedra", "encantamientos":[]},
 			"hacha":{"material": "piedra", "encantamientos":[]},
-			"arco":{"material": null, "encantamientos":[]},
-			"ballesta":{"material": null, "encantamientos":[]}
+			"arco":{"material": "none", "encantamientos":[]},
+			"ballesta":{"material": "none", "encantamientos":[]}
 		},
 		"minerales": {
 			"hierro": 8,
@@ -234,8 +234,8 @@
 			"pies":{"material": null, "encantamientos":[]},
 			"espada":{"material": null, "encantamientos":[]},
 			"hacha":{"material": "piedra", "encantamientos":[]},
-			"arco":{"material": null, "encantamientos":[]},
-			"ballesta":{"material": null, "encantamientos":[]}
+			"arco":{"material": "none", "encantamientos":[]},
+			"ballesta":{"material": "none", "encantamientos":[]}
 		},
 		"minerales": {
 			"hierro": 5,
@@ -266,8 +266,8 @@
 			"pies":{"material": null, "encantamientos":[]},
 			"espada":{"material": null, "encantamientos":[]},
 			"hacha":{"material": null, "encantamientos":[]},
-			"arco":{"material": null, "encantamientos":[]},
-			"ballesta":{"material": null, "encantamientos":[]}
+			"arco":{"material": "none", "encantamientos":[]},
+			"ballesta":{"material": "none", "encantamientos":[]}
 		},
 		"minerales": {
 			"hierro": 0,
@@ -284,7 +284,7 @@
 			"ojoarana":0,
 			"pociones" : {"swiftness":0}
 		},
-		"miscelaneo": [["Brewing Stand", 1], ["escudo",true], ["Aldea", true]],
+		"miscelaneo": [["brewing_stand", 1], ["escudo",true], ["aldea", true]],
 		"inventario": []
 	},
 
@@ -298,8 +298,8 @@
 			"pies":{"material": null, "encantamientos":[]},
 			"espada":{"material": "piedra", "encantamientos":[]},
 			"hacha":{"material": "piedra", "encantamientos":[]},
-			"arco":{"material": null, "encantamientos":[]},
-			"ballesta":{"material": null, "encantamientos":[]}
+			"arco":{"material": "none", "encantamientos":[]},
+			"ballesta":{"material": "none", "encantamientos":[]}
 		},
 		"minerales": {
 			"hierro": 7,
@@ -330,8 +330,8 @@
 			"pies":{"material": null, "encantamientos":[]},
 			"espada":{"material": "piedra", "encantamientos":[]},
 			"hacha":{"material": "piedra", "encantamientos":[]},
-			"arco":{"material": null, "encantamientos":[]},
-			"ballesta":{"material": null, "encantamientos":[]}
+			"arco":{"material": "none", "encantamientos":[]},
+			"ballesta":{"material": "none", "encantamientos":[]}
 		},
 		"minerales": {
 			"hierro": 0,
@@ -348,7 +348,7 @@
 			"ojoarana":0,
 			"pociones" : {"swiftness":0}
 		},
-		"miscelaneo": [["Brewing Stand", 1], ["escudo",true], ["Aldea", true]],
+		"miscelaneo": [["brewing_stand", 1], ["escudo",true], ["aldea", true]],
 		"inventario": []
 	},
 
@@ -362,8 +362,8 @@
 			"pies":{"material": null, "encantamientos":[]},
 			"espada":{"material": "hierro", "encantamientos":[]},
 			"hacha":{"material": "piedra", "encantamientos":[]},
-			"arco":{"material": null, "encantamientos":[]},
-			"ballesta":{"material": null, "encantamientos":[]}
+			"arco":{"material": "none", "encantamientos":[]},
+			"ballesta":{"material": "none", "encantamientos":[]}
 		},
 		"minerales": {
 			"hierro": 4,
