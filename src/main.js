@@ -41,30 +41,36 @@ async function updateVida(numJugador, numVida) {
 function barraCorazones(num) {
     let elem = document.createElement("div");
     for (let i = 0; i < Math.floor(num); i++) {
-        elem.appendChild(crearImgElem(IconPaths.corazones+"hardcore_full.png"), "20px", "20px", "Hardcore full heart");
+        elem.appendChild(crearImgElem([IconPaths.corazones+"hardcore_full.png"], 20, 20, "Hardcore full heart"));
     }
     if (!Number.isInteger(num)) {
-        elem.appendChild(crearImgElem(IconPaths.corazones+"hardcore_half.png"), "20px", "20px", "Hardcore half heart");
+        elem.appendChild(crearImgElem([IconPaths.corazones+"hardcore_half.png"], 20, 20, "Hardcore half heart"));
     }
     // Chequeo si falta agregar contenedores de corazón vacío; redondeo para arriba porque el medio corazon cuenta como un contenedor completo.
     while (Math.round(num) < 10) {
-        elem.appendChild(crearImgElem(IconPaths.corazones+"heart_container.png"), "20px", "20px", "Empty heart container");
+        elem.appendChild(crearImgElem([IconPaths.corazones+"heart_container.png"], 20, 20, "Empty heart container"));
         num++;
     }
     return elem;
 }
 
-function crearImgElem(path, height=null, width=null, alt=null) {
-    /*
+function crearImgElem(imgs, height=null, width=null, alt=null) {
     let imgHTML = document.createElement("canvas");
+    imgHTML.setAttribute("width",width);
+    imgHTML.setAttribute("height",height);
     let ctx = imgHTML.getContext("2d");
-    ctx.drawImage(path, 0, 0, width, height);
-    imgHTML.setAttribute("alt", alt);
-    */
-    let imgHTML = document.createElement("img");
-    imgHTML.setAttribute("src", path);
-    imgHTML.setAttribute("height", height);
-    imgHTML.setAttribute("width", width);
+    ctx.webkitImageSmoothingEnabled = false;
+    ctx.mozImageSmoothingEnabled = false;
+    ctx.imageSmoothingEnabled = false;
+    imgs.forEach(imgPath => {
+        let imgElem = document.createElement("img");
+        imgElem.setAttribute("src", imgPath);
+        imgElem.setAttribute("width",width);
+        imgElem.setAttribute("height",height);
+        imgElem.onload = function(){
+            ctx.drawImage(imgElem, 0, 0, width, height);
+        }
+    });
     imgHTML.setAttribute("alt", alt);
     return imgHTML;
 }
@@ -74,8 +80,11 @@ async function crearLuegoAgregarContenido(categoria, categoryHTML, stats_jugador
     switch (categoria) {
         case "equipamiento":
             for (let k in stats_jugador_en_categoria) {
-                let nombreImg = Traductor.traducirEquipamiento(k, stats_jugador_en_categoria[k]);
-                let elemImg = crearImgElem(IconPaths.equipamiento+nombreImg, 32, 32, k + " " + stats_jugador_en_categoria[k]["material"]);
+                let nombreImg = Traductor.equipamientoAImagenes(k, stats_jugador_en_categoria[k]);
+                nombreImg = nombreImg.map((element) => 
+                    IconPaths.equipamiento+element
+                );
+                let elemImg = crearImgElem(nombreImg, 32, 32, k + " " + stats_jugador_en_categoria[k]["material"]);
                 elem.appendChild(elemImg);
             }
             break;

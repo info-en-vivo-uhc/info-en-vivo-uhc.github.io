@@ -70,11 +70,15 @@ class Traductor {
         "escudo": "shield",
         "escudo_path": IconPaths.equipamiento
     };
-    static traducirEquipamiento(tipo, valores) {
+    static equipamientoAImagenes(tipo, valores) {
         let material = ""
         if (valores["material"] != null) {
             material = Traductor.material[valores["material"]] + "_"
         }
-        return material + Traductor.equipamiento[tipo] + ".png";
+        let images = [material + Traductor.equipamiento[tipo] + ".png"];
+        if (material == "leather_") {
+            images.push(material + Traductor.equipamiento[tipo] + "_overlay.png");
+        }
+        return images;
     }
 }
