@@ -9,7 +9,7 @@ main()
 
 function main() {
     loadPlayers(TEMPORADA_ACTUAL, EPISODIO_ACTUAL);
-    loadEpisodio(TEMPORADA_ACTUAL, EPISODIO_ACTUAL);
+    loadSelectorEpisodios(TEMPORADA_ACTUAL, EPISODIO_ACTUAL);
 }
 
 async function loadPlayers(temp, ep) {
@@ -42,7 +42,7 @@ async function loadStats(temp, ep, jugador, equipo, numJugador) {
     }
 }
 
-function loadEpisodio() {
+function loadSelectorEpisodios() {
     let flechaIzqHTML = document.getElementById("ep_izq");
     let flechaDerHTML = document.getElementById("ep_der");
     flechaIzqHTML.onclick = function() {
@@ -80,6 +80,8 @@ function cambiarDeEpisodio(temp, ep) {
     // Cargar las stats del nuevo episodio de
     //    El jugador actual O
     //    Cambiar de jugador
+    let epNameHTML = document.getElementById("ep_name");
+    epNameHTML.innerText = "Episodio " + ep;
     EPISODIO_ACTUAL = ep;
     console.log("Episodio actual: " + EPISODIO_ACTUAL);
     let selectorHTML = document.getElementById("selector_jugador");
