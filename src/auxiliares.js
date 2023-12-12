@@ -87,7 +87,10 @@ class Traductor {
         "brewing_stand_dims": [40, 40],
         "aldea": "village",
         "aldea_path": "../img/assets/",
-        "aldea_dims": [35, 40]
+        "aldea_dims": [35, 40],
+        "semillas_melon": "melon_seeds",
+        "semillas_melon_path": "../img/assets/",
+        "semillas_melon_dims": [40,40]
     };
     static equipamientoAImagenes(tipo, valores) {
         let images = []
