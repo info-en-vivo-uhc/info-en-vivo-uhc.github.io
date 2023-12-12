@@ -34,7 +34,7 @@
 
 	"elrichmc": {
 		"vivo": true,
-		"vida": 10,
+		"vida": 8.5,
 		"equipamiento": {
 			"cabeza":{"material": "hierro", "encantamientos":[]},
 			"cuerpo":{"material": "hierro", "encantamientos":[]},
@@ -67,19 +67,19 @@
 
 	"esvandal": {
 		"vivo": true,
-		"vida": 10,
+		"vida": 9.5,
 		"equipamiento": {
 			"cabeza":{"material": "hierro", "encantamientos":[]},
-			"cuerpo":{"material": null, "encantamientos":[]},
-			"piernas":{"material": null, "encantamientos":[]},
+			"cuerpo":{"material": "hierro", "encantamientos":[]},
+			"piernas":{"material": "hierro", "encantamientos":[]},
 			"pies":{"material": "hierro", "encantamientos":[]},
 			"espada":{"material": null, "encantamientos":[]},
-			"hacha":{"material": "piedra", "encantamientos":[]},
-			"arco":{"material": "none", "encantamientos":[]},
-			"ballesta":{"material": "none", "encantamientos":[]}
+			"hacha":{"material": "hierro", "encantamientos":[]},
+			"arco":{"material": null, "encantamientos":[]},
+			"ballesta":{"material": null, "encantamientos":[]}
 		},
 		"minerales": {
-			"hierro": 0,
+			"hierro": 6,
 			"oro": 0,
 			"diamante": 0
 		},
@@ -93,13 +93,13 @@
 			"ojoarana":0,
 			"pociones" : {"swiftness":0}
 		},
-		"miscelaneo": [["escudo",true]],
+		"miscelaneo": [["escudo",true], ["lobo",1]],
 		"inventario": []
 	},
 
 	"felipez360": {
 		"vivo": true,
-		"vida": 8,
+		"vida": 6.5,
 		"equipamiento": {
 			"cabeza":{"material": "hierro", "encantamientos":[]},
 			"cuerpo":{"material": "hierro", "encantamientos":[]},
@@ -144,9 +144,10 @@
 			"ballesta":{"material": "none", "encantamientos":[]}
 		},
 		"minerales": {
-			"hierro": 1,
+			"hierro": 17,
 			"oro": 0,
-			"diamante": 0
+			"diamante": 0,
+			"esmeralda": 3
 		},
 		"curacion": {
 			"manzana":0,
@@ -156,7 +157,7 @@
 		"nether_pociones": {
 			"blazerod":0,
 			"ojoarana":0,
-			"pociones" : {"swiftness":3}
+			"pociones" : {"swiftness":0}
 		},
 		"miscelaneo": [["escudo",true]],
 		"inventario": []
@@ -164,7 +165,7 @@
 
 	"kaumaru102": {
 		"vivo": true,
-		"vida": 8,
+		"vida": 6,
 		"equipamiento": {
 			"cabeza":{"material": "hierro", "encantamientos":[]},
 			"cuerpo":{"material": "hierro", "encantamientos":[]},
