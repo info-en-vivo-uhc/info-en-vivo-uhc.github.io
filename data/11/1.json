@@ -284,7 +284,7 @@
 			"ojoarana":0,
 			"pociones" : {"swiftness":0}
 		},
-		"miscelaneo": [["brewing_stand", 1], ["escudo",true], ["aldea", true]],
+		"miscelaneo": [["brewing_stand", true], ["escudo",true], ["aldea", true]],
 		"inventario": []
 	},
 

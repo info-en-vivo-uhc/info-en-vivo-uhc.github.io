@@ -3,12 +3,13 @@ import { printError, getJson, IconPaths, Traductor } from './auxiliares.js';
 var categorias = ["equipamiento","minerales","curacion","nether_pociones","miscelaneo","inventario"]
 
 main()
+var TEMPORADA = 11;
+var EPISODIO = 1;
 
 function main() {
     let temporada = 11;
     let episodio = 1;
     loadPlayers(temporada, episodio);
-    loadStats(temporada, episodio, "elrichmc", null);
 }
 
 async function loadPlayers(temp, ep) {
@@ -17,14 +18,14 @@ async function loadPlayers(temp, ep) {
         let selectorHTML = document.getElementById("selector_jugador");
         let iconHTML = crearImgElem([IconPaths.jugadores + jugador + "_icon.png"], 40, 40, info_jugadores[jugador]["nombre"]);
         iconHTML.onclick = function() {
-            loadStats(temp, ep, jugador, null);
+            loadStats(TEMPORADA, EPISODIO, jugador, null, 1);
         }
         selectorHTML.appendChild(iconHTML);
     }
+    loadStats(temp, ep, Object.keys(info_jugadores)[0], null, 1);
 }
 
-async function loadStats(temp, ep, jugador, equipo) {
-    let numJugador = 1;
+async function loadStats(temp, ep, jugador, equipo, numJugador) {
     clearStats(numJugador);
     if (equipo == null) {
         var info_jugadores = await getJson("../data/"+temp+"/jugadores.json");
@@ -58,8 +59,7 @@ function updateStats(info_jugador, stats_jugador, numJugador) {
     nameHTML.innerHTML = info_jugador["nombre"]
     updateVida(numJugador, stats_jugador["vida"]);
     categorias.forEach(categoria => {
-        let attr = categoria+"_"+numJugador;
-        let categoryHTML = document.getElementById(attr);
+        let categoryHTML = document.getElementById(categoria+"_"+numJugador);
         crearLuegoAgregarContenido(categoria, categoryHTML, stats_jugador[categoria]);
     });
 }
@@ -122,9 +122,9 @@ async function crearLuegoAgregarContenido(categoria, categoryHTML, stats_jugador
         case "equipamiento":
             for (let k in stats_jugador_en_categoria) {
                 let valores = stats_jugador_en_categoria[k];
-                    if (valores["material"] != null) {
+                if (valores["material"] != null) {
                     let nombreImg = Traductor.equipamientoAImagenes(k, valores);
-                    nombreImg = nombreImg.map((element) => 
+                    nombreImg = nombreImg.map((element) =>
                         IconPaths.equipamiento+element
                     );
                     let elemImg = crearImgElem(nombreImg, 32, 32, k + " " + valores["material"]);
