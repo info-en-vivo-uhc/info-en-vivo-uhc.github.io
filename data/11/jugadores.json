@@ -22,5 +22,53 @@
         "sociales": {
             "youtube": "https://www.youtube.com/@EsVandal"
         }
+    },
+    "felipez360": {
+        "nombre": "Felipez360",
+        "sociales": {
+            "youtube": "https://www.youtube.com/@SoyFelipez360"
+        }
+    },
+    "kakytron": {
+        "nombre": "Kakytron",
+        "sociales": {
+            "youtube": "https://www.youtube.com/@KakyMinecraft"
+        }
+    },
+    "kaumaru102": {
+        "nombre": "Kaumaru102",
+        "sociales": {
+            "youtube": "https://www.youtube.com/@Kaumaru102"
+        }
+    },
+    "paracetamor": {
+        "nombre": "Paracetamor",
+        "sociales": {
+            "youtube": "https://www.youtube.com/@Paracetamor"
+        }
+    },
+    "rangugamer": {
+        "nombre": "RanguGamer",
+        "sociales": {
+            "youtube": "https://www.youtube.com/@RanguGamer"
+        }
+    },
+    "rubik": {
+        "nombre": "RubikYT",
+        "sociales": {
+            "youtube": "https://www.youtube.com/@RubikYT"
+        }
+    },
+    "thegamermaldito": {
+        "nombre": "TheGamerMaldito",
+        "sociales": {
+            "youtube": "https://www.youtube.com/@TheGamerMaldito"
+        }
+    },
+    "tonacho": {
+        "nombre": "Tonacho",
+        "sociales": {
+            "youtube": "https://www.youtube.com/@MinecraftZaragoza"
+        }
     }
 }
