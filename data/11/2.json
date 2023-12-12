@@ -103,17 +103,18 @@
 		"equipamiento": {
 			"cabeza":{"material": "hierro", "encantamientos":[]},
 			"cuerpo":{"material": "hierro", "encantamientos":[]},
-			"piernas":{"material": null, "encantamientos":[]},
-			"pies":{"material": null, "encantamientos":[]},
-			"espada":{"material": "oro", "encantamientos":["Mending"]},
+			"piernas":{"material": "hierro", "encantamientos":[]},
+			"pies":{"material": "hierro", "encantamientos":[]},
+			"espada":{"material": "piedra", "encantamientos":[]},
 			"hacha":{"material": "piedra", "encantamientos":[]},
 			"arco":{"material": "none", "encantamientos":[]},
-			"ballesta":{"material": "none", "encantamientos":[]}
+			"ballesta":{"material": null, "encantamientos":[]}
 		},
 		"minerales": {
-			"hierro": 2,
+			"hierro": 4,
 			"oro": 0,
-			"diamante": 0
+			"diamante": 0,
+			"esmeralda": 6
 		},
 		"curacion": {
 			"manzana":0,
@@ -125,7 +126,7 @@
 			"ojoarana":0,
 			"pociones" : {"swiftness":0}
 		},
-		"miscelaneo": [["escudo",true]],
+		"miscelaneo": [["escudo",true], ["aldea",true]],
 		"inventario": []
 	}, 	
 
