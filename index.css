@@ -28,7 +28,7 @@
     display: flex;
     flex-direction: row;
     height: var(--header-height);
-    min-height: var(--header-height);
+    min-height: 104px;
     /*border: 2px solid blue;*/
   }
   .temporada { 
@@ -53,12 +53,12 @@
     color: white;
     max-width: 20%;
     background-color: #757575;
-    padding: 20px;
+    padding: 10px;
   }
   #ep_name {
     color: white;
     background-color: #9e9e9e;
-    padding: 20px;
+    padding: 10px;
     width: 100%; 
   }
 
@@ -72,8 +72,21 @@
   .logotemp { 
     display: flex;
     height: var(--header-height);
+    min-height: 104px;
     /*border: 2px solid purple;*/
   }
 
-
-  
+/* Use a media query to add a break point at 800px: */
+@media screen and (max-width: 800px) {
+  .stat1_foto, .stat2, .stat1, .foto {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+  .temporada_episodio {
+    flex-direction: column;
+    height: auto;
+    min-height: auto;
+  }
+  .selectores {
+    width: 100%;
+  }
+}

@@ -1,28 +1,31 @@
-import { printError, getJson, IconPaths, Traductor } from './auxiliares.js';
+import { printError, getJson, IconPaths, Traductor, Temporadas } from './auxiliares.js';
 
 var categorias = ["equipamiento","minerales","curacion","nether_pociones","miscelaneo","inventario"]
 
+var TEMPORADA_ACTUAL = 11;
+var EPISODIO_ACTUAL = 1;
+var JUGADOR_ACTUAL = 0;
 main()
-var TEMPORADA = 11;
-var EPISODIO = 1;
 
 function main() {
-    let temporada = 11;
-    let episodio = 1;
-    loadPlayers(temporada, episodio);
+    loadPlayers(TEMPORADA_ACTUAL, EPISODIO_ACTUAL);
+    loadEpisodio(TEMPORADA_ACTUAL, EPISODIO_ACTUAL);
 }
 
 async function loadPlayers(temp, ep) {
     var info_jugadores = await getJson("../data/"+temp+"/jugadores.json");
-    for (let jugador in info_jugadores) {
+    for (let index = 0; index < Object.keys(info_jugadores).length; index++) {
+        let jugador = Object.keys(info_jugadores)[index];
         let selectorHTML = document.getElementById("selector_jugador");
         let iconHTML = crearImgElem([IconPaths.jugadores + jugador + "_icon.png"], 40, 40, info_jugadores[jugador]["nombre"]);
         iconHTML.onclick = function() {
-            loadStats(TEMPORADA, EPISODIO, jugador, null, 1);
+            loadStats(temp, ep, jugador, null, 1);
+            JUGADOR_ACTUAL = index;
+            console.log(JUGADOR_ACTUAL);
         }
         selectorHTML.appendChild(iconHTML);
     }
-    loadStats(temp, ep, Object.keys(info_jugadores)[0], null, 1);
+    loadStats(temp, ep, Object.keys(info_jugadores)[JUGADOR_ACTUAL], null, 1);
 }
 
 async function loadStats(temp, ep, jugador, equipo, numJugador) {
@@ -37,6 +40,51 @@ async function loadStats(temp, ep, jugador, equipo, numJugador) {
         var equipo_data = await getJson("../data/"+temp+"/equipos.json");
         //equipo_data[equipo];
     }
+}
+
+function loadEpisodio() {
+    let flechaIzqHTML = document.getElementById("ep_izq");
+    let flechaDerHTML = document.getElementById("ep_der");
+    flechaIzqHTML.onclick = function() {
+        let max_temp_actual = Temporadas.cantEpisodios(TEMPORADA_ACTUAL);
+        if (EPISODIO_ACTUAL>1) { //Episodio 1 es el primer episodio, porque asi coincide con los nombres de los .json 
+            cambiarDeEpisodio(TEMPORADA_ACTUAL, EPISODIO_ACTUAL-1); 
+        }
+        if (EPISODIO_ACTUAL == 1) {
+            //TODO: poner en gris la flecha izquierda
+            flechaIzqHTML.style.setProperty("background-color", "#9e9e9e");
+        } else if (EPISODIO_ACTUAL == max_temp_actual-1) {
+            //Acabo de pasar del ultimo episodio al anteultimo, debo pintar la flecha derecha color de nuevo
+            flechaDerHTML.style.setProperty("background-color", "#757575");
+        }
+    }
+    flechaDerHTML.onclick = function() {
+        let max_temp_actual = Temporadas.cantEpisodios(TEMPORADA_ACTUAL);
+        if (EPISODIO_ACTUAL < max_temp_actual) { //Episodio 1 es el primer episodio, porque asi coincide con los nombres de los .json 
+            cambiarDeEpisodio(TEMPORADA_ACTUAL, EPISODIO_ACTUAL+1); 
+        }
+        if (EPISODIO_ACTUAL == Temporadas.cantEpisodios(TEMPORADA_ACTUAL)) {
+            //TODO: poner en gris la flecha derecha
+            flechaDerHTML.style.setProperty("background-color", "#9e9e9e");
+        } else if (EPISODIO_ACTUAL == 2) {
+            //Acabo de pasar del ultimo episodio al anteultimo, debo pintar la flecha derecha color de nuevo
+            flechaIzqHTML.style.setProperty("background-color", "#757575");
+        }
+    }
+}
+
+function cambiarDeEpisodio(temp, ep) {
+    // Qué tiene que pasar cuando se cambia de episodio
+    // Actualizar variable de episodio - ojo con máximo y mínimo de episodio
+    //    Si la flecha no puede avanzar mas, cambiar el color?
+    // Cargar las stats del nuevo episodio de
+    //    El jugador actual O
+    //    Cambiar de jugador
+    EPISODIO_ACTUAL = ep;
+    console.log("Episodio actual: " + EPISODIO_ACTUAL);
+    let selectorHTML = document.getElementById("selector_jugador");
+    removeChildren(selectorHTML);
+    loadPlayers(temp, ep);
 }
 
 function removeChildren(div){

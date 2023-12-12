@@ -1,4 +1,4 @@
-export { printError, getJson, IconPaths, Traductor }
+export { printError, getJson, IconPaths, Traductor, Temporadas }
 
 function printError(error, path, explicit) {
     console.log(`[${explicit ? 'EXPLICIT' : 'INEXPLICIT'}] ${error.name}: ${error.message}, JSON Path: ${path}. This error probably occurs because JSON file has a syntax error or does not exist`);
@@ -16,6 +16,19 @@ async function getJson(path){
         }
     }
     return data;
+}
+
+class Temporadas {
+    static cantEpisodios(temp) {
+        let res = 0;
+        switch (temp) {
+            case 11:
+                res = 3;
+                break;
+            //default:
+        }
+        return res;
+    }
 }
 
 class IconPaths {
