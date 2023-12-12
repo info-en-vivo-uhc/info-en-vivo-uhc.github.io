@@ -65,8 +65,10 @@
   .selector_jugador {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
-    padding: 10px;
+    padding: 5px;
+    gap: 5px;
   }
 
   .logotemp { 

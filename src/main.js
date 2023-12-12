@@ -17,7 +17,7 @@ async function loadPlayers(temp, ep) {
     for (let index = 0; index < Object.keys(info_jugadores).length; index++) {
         let jugador = Object.keys(info_jugadores)[index];
         let selectorHTML = document.getElementById("selector_jugador");
-        let iconHTML = crearImgElem([IconPaths.jugadores + jugador + "_icon.png"], 40, 40, info_jugadores[jugador]["nombre"]);
+        let iconHTML = crearImgElem([IconPaths.iconos_jugadores + jugador + ".png"], 40, 40, info_jugadores[jugador]["nombre"]);
         iconHTML.onclick = function() {
             loadStats(temp, ep, jugador, null, 1);
             JUGADOR_ACTUAL = index;

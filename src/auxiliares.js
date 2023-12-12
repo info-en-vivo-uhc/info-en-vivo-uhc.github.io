@@ -39,7 +39,7 @@ class IconPaths {
     static minerales = this.equipamiento;  
     static curacion = this.equipamiento;  
     static nether_pociones = this.equipamiento;  
-    static jugadores = "../img/jugadores/";
+    static iconos_jugadores = "../img/jugadores/icon/";
 }
 
 class Traductor {
