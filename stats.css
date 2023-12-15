@@ -11,7 +11,7 @@
   /*width: 43%;*/
   justify-content: space-between;
 }
-.stat2 {
+#stat2 {
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -19,7 +19,7 @@
   /*width: 28%;*/
   width: 300px;/* 40%;*/
 }
-.stat3 {
+#stat3 {
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -28,7 +28,7 @@
   width: 300px;/* 40%;*/
 }
 
-.stat1 {
+#stat1 {
   text-align: center;
   display: flex;
   flex-direction: column;

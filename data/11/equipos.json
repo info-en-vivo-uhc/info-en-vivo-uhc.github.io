@@ -1,5 +1,18 @@
 {
-  "killerrich" : {
-    "miembros" : ["elrichmc", "killercreeper55"]
+  "wardenslayers" : {
+    "nombre" : "Warden Slayers",
+    "miembros" : ["elrichmc", "paracetamor", "felipez360"]
+  },
+  "theboysarebackintown" : {
+    "nombre" : "The boys are back in town",
+    "miembros" : ["esvandal", "rangugamer", "thegamermaldito"]
+  },
+  "sinnombre" : {
+    "nombre" : "",
+    "miembros" : ["killercreeper_55", "chincheto77", "kaumaru102"]
+  },
+  "lasgacelasheridas" : {
+    "nombre" : "Las gacelas heridas",
+    "miembros" : ["rubik", "tonacho", "kakytron"]
   }
 }

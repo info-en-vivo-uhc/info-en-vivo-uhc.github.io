@@ -2,6 +2,7 @@
     "elrichmc": {
         "nombre": "ElRichMC",
         "user": "elrichmc",
+        "equipo": "wardenslayers",
         "sociales": {
             "youtube": "http://www.youtube.com/@ElRichMC"
         }
@@ -9,6 +10,7 @@
     "killercreeper_55": {
         "nombre": "KillerCreeper55",
         "user": "killercreeper_55",
+        "equipo": "sinnombre",
         "sociales": {
             "youtube": "https://www.youtube.com/killercreeper55"
         }
@@ -16,6 +18,7 @@
     "chincheto77": {
         "nombre": "Chincheto77",
         "user": "chincheto77",
+        "equipo": "sinnombre",
         "sociales": {
             "youtube": "https://www.youtube.com/@SrChincheto77"
         }
@@ -23,6 +26,7 @@
     "esvandal": {
         "nombre": "EsVandal",
         "user": "esvandal",
+        "equipo": "theboysarebackintown",
         "sociales": {
             "youtube": "https://www.youtube.com/@EsVandal"
         }
@@ -30,6 +34,7 @@
     "felipez360": {
         "nombre": "Felipez360",
         "user": "xXmineCr4fterXx",
+        "equipo": "wardenslayers",
         "sociales": {
             "youtube": "https://www.youtube.com/@SoyFelipez360"
         }
@@ -37,6 +42,7 @@
     "kakytron": {
         "nombre": "Kakytron",
         "user": "Kakytronco",
+        "equipo": "lasgacelasheridas",
         "sociales": {
             "youtube": "https://www.youtube.com/@KakyMinecraft"
         }
@@ -44,6 +50,7 @@
     "kaumaru102": {
         "nombre": "Kaumaru102",
         "user": "Kaumaru",
+        "equipo": "sinnombre",
         "sociales": {
             "youtube": "https://www.youtube.com/@Kaumaru102"
         }
@@ -51,6 +58,7 @@
     "paracetamor": {
         "nombre": "Paracetamor",
         "user": "paracetamor",
+        "equipo": "wardenslayers",
         "sociales": {
             "youtube": "https://www.youtube.com/@Paracetamor"
         }
@@ -58,6 +66,7 @@
     "rangugamer": {
         "nombre": "RanguGamer",
         "user": "RanguGamer",
+        "equipo": "theboysarebackintown",
         "sociales": {
             "youtube": "https://www.youtube.com/@RanguGamer"
         }
@@ -65,6 +74,7 @@
     "rubik": {
         "nombre": "RubikYT",
         "user": "RubikYT",
+        "equipo": "lasgacelasheridas",
         "sociales": {
             "youtube": "https://www.youtube.com/@RubikYT"
         }
@@ -72,6 +82,7 @@
     "thegamermaldito": {
         "nombre": "TheGamerMaldito",
         "user": "TheGamerMaldito",
+        "equipo": "theboysarebackintown",
         "sociales": {
             "youtube": "https://www.youtube.com/@TheGamerMaldito"
         }
@@ -79,6 +90,7 @@
     "tonacho": {
         "nombre": "Tonacho",
         "user": "tonacho",
+        "equipo": "lasgacelasheridas",
         "sociales": {
             "youtube": "https://www.youtube.com/@MinecraftZaragoza"
         }

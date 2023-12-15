@@ -1,48 +1,94 @@
 import { printError, getJson, IconPaths, Traductor, Temporadas } from './auxiliares.js';
 
 var categorias = ["equipamiento","minerales","curacion","nether_pociones","miscelaneo","inventario"]
+var panel_on = [true,true,true]
 
 var TEMPORADA_ACTUAL = 11;
 var EPISODIO_ACTUAL = 1;
-var JUGADOR_ACTUAL = 0;
 main()
 
 function main() {
     loadPlayers(TEMPORADA_ACTUAL, EPISODIO_ACTUAL);
-    loadTeam(TEMPORADA_ACTUAL, EPISODIO_ACTUAL, JUGADOR_ACTUAL);
     loadSelectorEpisodios(TEMPORADA_ACTUAL, EPISODIO_ACTUAL);
 }
 
 async function loadPlayers(temp, ep) {
+    var info_equipos = await getJson("../data/"+temp+"/equipos.json");
     var info_jugadores = await getJson("../data/"+temp+"/jugadores.json");
-    for (let index = 0; index < Object.keys(info_jugadores).length; index++) {
-        let jugador = Object.keys(info_jugadores)[index];
-        let selectorHTML = document.getElementById("selector_jugador");
-        let iconHTML = crearImgElem([IconPaths.iconos_jugadores + jugador + ".png"], 40, 40, info_jugadores[jugador]["nombre"]);
-        iconHTML.onclick = function() {
-            loadStats(temp, ep, jugador, null, 1);
-            JUGADOR_ACTUAL = index;
-            console.log(JUGADOR_ACTUAL);
+    for (let index = 0; index < Object.keys(info_equipos).length; index++) {
+        let equipo = Object.keys(info_equipos)[index];
+        let info_equipo = info_equipos[equipo];
+        for (let i_miembro = 0; i_miembro < info_equipo["miembros"].length; i_miembro++) {
+            const jugador = info_equipo["miembros"][i_miembro];
+            let selectorHTML = document.getElementById("selector_jugador");
+            let iconHTML = crearImgElem([IconPaths.iconos_jugadores + jugador + ".png"], 40, 40, info_jugadores[jugador]["nombre"]);
+            iconHTML.onclick = function() {
+                loadTeam(temp, ep, jugador);
+            }
+            selectorHTML.appendChild(iconHTML);
         }
-        selectorHTML.appendChild(iconHTML);
     }
-    loadStats(temp, ep, Object.keys(info_jugadores)[JUGADOR_ACTUAL], null, 1);
-    loadStats(temp, ep, Object.keys(info_jugadores)[JUGADOR_ACTUAL+1], null, 2);
-    loadStats(temp, ep, Object.keys(info_jugadores)[JUGADOR_ACTUAL+2], null, 3);
+    loadTeam(TEMPORADA_ACTUAL, EPISODIO_ACTUAL, Object.keys(info_jugadores)[0]);
 }
 
-async function loadStats(temp, ep, jugador, equipo, numJugador) {
-    clearStats(numJugador);
-    if (equipo == null) {
-        var info_jugadores = await getJson("../data/"+temp+"/jugadores.json");
-        var info_jugador = info_jugadores[jugador];
-        var stats_jugadores = await getJson("../data/"+temp+"/"+ep+".json");
-        var stats_jugador = stats_jugadores[jugador];
-        updateStats(info_jugador, stats_jugador, numJugador);
-    } else {
-        var equipo_data = await getJson("../data/"+temp+"/equipos.json");
-        //equipo_data[equipo];
+async function loadTeam(temp, ep, jugador) {
+    var info_jugadores = await getJson("../data/"+temp+"/jugadores.json");
+    var info_jugador = info_jugadores[jugador];
+    var stats_jugadores = await getJson("../data/"+temp+"/"+ep+".json");
+    var stats_jugador = stats_jugadores[jugador];
+    if (info_jugador["equipo"] != null) {
+        var info_equipo = await getJson("../data/"+temp+"/equipos.json");
+        info_equipo = info_equipo[info_jugador["equipo"]];
+        var numTeamMembers = info_equipo["miembros"].length;
     }
+    for (let index = 0; index < numTeamMembers; index++) {
+        jugador = info_equipo["miembros"][index];
+        info_jugador = info_jugadores[jugador];
+        stats_jugador = stats_jugadores[jugador];
+        loadStats(info_jugador, stats_jugador, index+1);
+    }
+    for (let index = 2; index > numTeamMembers-1; index--) {
+        // Si hay menos de tres jugadores (índice 2) tengo que apagar los paneles de los jugadores que no están en el equipo        
+        apagarPanel(index+1);
+    }
+}
+
+function hideAll(className) {
+    var ele = document.getElementsByClassName(className);
+    for (var i = 0; i < ele.length; i++ ) {
+        ele[i].style.display = "none";
+    }
+}
+
+function showAll(className, displayValue) {
+    var ele = document.getElementsByClassName(className);
+    for (var i = 0; i < ele.length; i++ ) {
+        ele[i].style.setProperty("display",displayValue);
+    }
+}
+
+function apagarPanel(numJugador) {
+    if (numJugador > 2 && panel_on[numJugador-1]) {
+        hideAll("stat"+numJugador);
+        document.getElementById("stat"+numJugador).style.setProperty("display","none");
+        panel_on[numJugador-1] = false;
+    }
+}
+
+function prenderPanel(numJugador) {
+    if (numJugador > 2 && !panel_on[numJugador-1]) {
+        showAll("container stat"+numJugador, "flex");
+        showAll("contenido stat"+numJugador, "flex");
+        showAll("encabezados stat"+numJugador, "block");
+        document.getElementById("stat"+numJugador).style.setProperty("display","initial");
+        panel_on[numJugador-1] = true;
+    }
+}
+
+async function loadStats(info_jugador, stats_jugador, numJugador) {
+    prenderPanel(numJugador);
+    clearStats(numJugador);
+    updateStats(info_jugador, stats_jugador, numJugador);
 }
 
 function loadSelectorEpisodios() {
@@ -96,6 +142,12 @@ function removeChildren(div){
     while(div.firstChild){
         div.removeChild(div.firstChild);
     }
+}
+
+function clearAllStats() {
+    clearStats(1);
+    clearStats(2);
+    clearStats(3);
 }
 
 function clearStats(numJugador) {
