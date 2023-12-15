@@ -9,6 +9,7 @@ main()
 
 function main() {
     loadPlayers(TEMPORADA_ACTUAL, EPISODIO_ACTUAL);
+    loadTeam(TEMPORADA_ACTUAL, EPISODIO_ACTUAL, JUGADOR_ACTUAL);
     loadSelectorEpisodios(TEMPORADA_ACTUAL, EPISODIO_ACTUAL);
 }
 
