@@ -27,6 +27,7 @@ async function loadPlayers(temp, ep) {
     }
     loadStats(temp, ep, Object.keys(info_jugadores)[JUGADOR_ACTUAL], null, 1);
     loadStats(temp, ep, Object.keys(info_jugadores)[JUGADOR_ACTUAL+1], null, 2);
+    loadStats(temp, ep, Object.keys(info_jugadores)[JUGADOR_ACTUAL+2], null, 3);
 }
 
 async function loadStats(temp, ep, jugador, equipo, numJugador) {

@@ -1,28 +1,40 @@
 .stats {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  gap: 5px;
   /*border: 1px solid green;*/
 }
 .stat1_foto {
   display: flex;
   flex-direction: row;
-  width: 60%;
+  /*width: 43%;*/
+  justify-content: space-between;
 }
 .stat2 {
   text-align: center;
   display: flex;
   flex-direction: column;
   background-color: #2b2b2b;
-  width: 40%;
+  /*width: 28%;*/
+  width: 300px;/* 40%;*/
 }
-
+.stat3 {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #2b2b2b;
+  /*width: 28%;*/
+  width: 300px;/* 40%;*/
+}
 
 .stat1 {
   text-align: center;
   display: flex;
   flex-direction: column;
   background-color: #2b2b2b;
-  width: 66.66%; /* El contenedor de stat1 y foto mide 80% asi q esto es 20% del tot de la imagen */
+  width: 300px;/* 40%;*/
+  /*width: 65%; El contenedor de stat1 y foto mide 80% asi q esto es 20% del tot de la imagen */
 }
 .encabezados {
   color: black;
@@ -36,6 +48,7 @@
   padding: 5px;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   /*image-rendering: pixelated;*/
 }
 
@@ -47,7 +60,8 @@
 .foto {
   background-color: #f1f1f1;
   padding: 20px;
-  width: 33.33%; /* El contenedor de stat1 y foto mide 80% asi q esto es 60% del tot de la imagen */
+  /*width: 34.8%;  El contenedor de stat1 y foto mide 80% asi q esto es 60% del tot de la imagen */
+  flex-grow: 1;
 }
 
 .displayname {
@@ -59,11 +73,12 @@
 @media screen and (max-width: 800px) {
   .stat1_foto, .stat2, .stat1, .foto {
     width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+    max-width: 100%;
   }
   .stats {
     flex-direction: column;
   }
   .stat1_foto {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
 }
